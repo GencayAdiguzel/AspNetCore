@@ -6,6 +6,7 @@
     <DefaultItemExcludes>${DefaultItemExcludes};node_modules\**</DefaultItemExcludes>
     <!-- WebDriver is not strong-named signed -->
     <SignAssembly>false</SignAssembly>
+    <BuildHelixPayload>false</BuildHelixPayload>
   </PropertyGroup>
 
   <Target Name="EnsureNpmRestored" BeforeTargets="Build" Condition="!Exists('node_modules') AND '$(BlazorAllTests)'=='true'">
